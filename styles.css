@@ -1,0 +1,230 @@
+/* ============================================================
+   Note to Social Image - Modal Styles
+   ============================================================ */
+
+.ntsi-modal {
+    max-width: 680px;
+    padding: 0;
+}
+
+.ntsi-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 12px;
+    padding: 0 4px;
+}
+
+.ntsi-modal-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-normal);
+    margin: 0;
+}
+
+.ntsi-hint {
+    font-size: 11px;
+    color: var(--text-faint);
+    background: var(--background-secondary);
+    padding: 2px 10px;
+    border-radius: 10px;
+}
+
+/* 实时预览区 */
+.ntsi-preview-wrap {
+    margin-bottom: 16px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--background-modifier-border);
+    background: var(--background-primary);
+}
+
+.ntsi-preview-text {
+    padding: 10px 14px 8px;
+    font-size: 12px;
+    border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.ntsi-preview-label {
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.ntsi-preview-content {
+    color: var(--text-normal);
+}
+
+.ntsi-live-preview {
+    height: 140px;
+    overflow: hidden;
+    position: relative;
+    background: repeating-conic-gradient(var(--background-secondary) 0% 25%, var(--background-primary) 0% 50%) 50% / 20px 20px;
+}
+
+.ntsi-preview-inner {
+    pointer-events: none;
+}
+
+/* 风格网格 */
+.ntsi-style-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+}
+
+.ntsi-style-card {
+    background: var(--background-secondary);
+    border: 2px solid var(--background-modifier-border);
+    border-radius: 12px;
+    padding: 16px 12px 12px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    text-align: center;
+    position: relative;
+    outline: none;
+}
+
+.ntsi-style-card:hover {
+    border-color: var(--interactive-accent);
+    background: var(--background-secondary-alt);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+.ntsi-style-card:focus-visible {
+    border-color: var(--interactive-accent);
+    box-shadow: 0 0 0 3px var(--interactive-accent-hover);
+    transform: translateY(-2px);
+}
+
+.ntsi-style-card.ntsi-active {
+    border-color: var(--interactive-accent);
+    background: var(--background-modifier-hover);
+    box-shadow: 0 0 0 2px var(--interactive-accent);
+}
+
+.ntsi-style-card.ntsi-selected {
+    border-color: var(--interactive-accent);
+    background: var(--interactive-accent);
+    color: var(--text-on-accent);
+    transform: scale(0.96);
+}
+
+.ntsi-style-card.ntsi-selected .ntsi-style-name,
+.ntsi-style-card.ntsi-selected .ntsi-style-desc {
+    color: var(--text-on-accent);
+}
+
+.ntsi-style-icon {
+    font-size: 28px;
+    margin-bottom: 6px;
+    line-height: 1;
+}
+
+.ntsi-style-name {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-normal);
+    margin-bottom: 2px;
+}
+
+.ntsi-style-desc {
+    font-size: 10px;
+    color: var(--text-muted);
+    line-height: 1.3;
+}
+
+/* 快捷键数字徽标 */
+.ntsi-shortcut-badge {
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--text-faint);
+    background: var(--background-modifier-border);
+    border-radius: 4px;
+    padding: 1px 6px;
+    min-width: 18px;
+    text-align: center;
+}
+
+.ntsi-style-card.ntsi-active .ntsi-shortcut-badge {
+    background: var(--interactive-accent);
+    color: var(--text-on-accent);
+}
+
+/* 底部操作栏 */
+.ntsi-footer {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.ntsi-btn {
+    padding: 8px 20px;
+    border-radius: 8px;
+    border: 1px solid var(--background-modifier-border);
+    background: var(--background-secondary);
+    color: var(--text-normal);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.ntsi-btn:hover {
+    background: var(--interactive-accent);
+    color: var(--text-on-accent);
+    border-color: var(--interactive-accent);
+}
+
+.ntsi-btn-quick {
+    background: var(--interactive-accent);
+    color: var(--text-on-accent);
+    border-color: var(--interactive-accent);
+}
+
+.ntsi-btn-quick:hover {
+    filter: brightness(1.1);
+}
+
+/* 成功通知 */
+.ntsi-success-notice {
+    padding: 12px 16px;
+    min-width: 320px;
+}
+
+.ntsi-success-text {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: var(--text-normal);
+}
+
+.ntsi-copied {
+    color: var(--text-success);
+    font-size: 12px;
+}
+
+.ntsi-success-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.ntsi-action-btn {
+    padding: 6px 14px;
+    border-radius: 6px;
+    border: 1px solid var(--background-modifier-border);
+    background: var(--background-secondary);
+    color: var(--text-normal);
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.ntsi-action-btn:hover {
+    background: var(--interactive-accent);
+    color: var(--text-on-accent);
+    border-color: var(--interactive-accent);
+}

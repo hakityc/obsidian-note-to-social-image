@@ -1,0 +1,10 @@
+{
+  "id": "note-to-social-image",
+  "name": "Note to Social Image",
+  "version": "1.0.0",
+  "minAppVersion": "1.5.0",
+  "description": "选中文字一键生成小红书/抖音风格的分享图片",
+  "author": "haki",
+  "authorUrl": "",
+  "isDesktopOnly": true
+}

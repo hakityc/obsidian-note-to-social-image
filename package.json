@@ -1,0 +1,23 @@
+{
+  "name": "obsidian-note-to-social-image",
+  "version": "1.0.0",
+  "description": "Export Obsidian notes as social-media-style images",
+  "main": "main.js",
+  "scripts": {
+    "dev": "npx esbuild main.ts --bundle --platform=node --external:obsidian --external:electron --external:@codemirror/autocomplete --external:@codemirror/collab --external:@codemirror/commands --external:@codemirror/language --external:@codemirror/lint --external:@codemirror/search --external:@codemirror/state --external:@codemirror/view --external:@lezer/common --external:@lezer/highlight --external:@lezer/lr --format=cjs --outfile=main.js --watch",
+    "build": "npx esbuild main.ts --bundle --platform=node --external:obsidian --external:electron --external:@codemirror/autocomplete --external:@codemirror/collab --external:@codemirror/commands --external:@codemirror/language --external:@codemirror/lint --external:@codemirror/search --external:@codemirror/state --external:@codemirror/view --external:@lezer/common --external:@lezer/highlight --external:@lezer/lr --format=cjs --outfile=main.js --minify"
+  },
+  "dependencies": {
+    "html2canvas": "^1.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.41",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "builtin-modules": "^3.3.0",
+    "esbuild": "^0.20.2",
+    "obsidian": "^1.12.3",
+    "tslib": "^2.6.0",
+    "typescript": "^5.9.3"
+  }
+}
